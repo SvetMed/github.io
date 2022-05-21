@@ -1,216 +1,157 @@
 body{
-    padding: 0;
-	margin: 0;
-    font-family: 'Roboto', sans-serif;
-    color: #000000;
-    font-size: 18px;
+  font-family: 'Ubuntu Condensed', sans-serif;
+    background: #EBEEFF;
 }
 
-
-
-h1{
-    font-style: normal;
-    font-weight: 500;
-    font-size: 72px;
-    line-height: 84px;
-    text-align: center;
-}
-
-h2{
-    font-style: normal;
-    font-weight: 500;
-    font-size: 64px;
-    line-height: 75px;
-    /* identical to box height */
-    text-align: center;
-    color: #007765;
-}
-h3{
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 28px;
-    /* identical to box height */
-    text-align: center;
-    color: #007765;
-}
-
-ul,li{
-    padding: 0;
-    margin: 0;
-    display: flex;
-	justify-content: space-between;
-}
-
-
-header{
-    background-color: #007765;
-}
 .container{
-    width: 1110px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-.logo{
-    padding-top: 20px;
-    padding-bottom: 15px;
+.nav{
+  max-width: 1300px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
 }
 
-.menu{
-    padding-top: 10px;
-    float:right;
+.logo img{
+  margin-left: -10px;
+   width: 50%;
 }
 
-.menu a{
-    text-decoration: none;
-    color: #fff;
-}
-
-.menu li{
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 28px;
-    padding-left: 10px;
-    color: #fff;
-}
-
-.header2{
-    background: url(../img/fon2.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-.header2 h1{
-    color: #fff;
-    padding-top: 160px;
-    padding-bottom: 160px;
-}
-
-.problem{
+.logo p{
+  position: absolute;
+  margin-top:55px;
+  margin-left: 3px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #606060;
+  letter-spacing: 1px;
+  text-decoration: none;
+  display: inline-block;
 
 }
 
-.problem p{
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 38px;
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+.menu-main {
+  padding-top: 10px;
+  list-style: none;
+  text-align: center;
+}
+.menu-main li {display: inline-block;}
+.menu-main li:after {
+  content: "|";
+  color: #606060;
+  display: inline-block;
+  vertical-align:baseline;
+}
+.menu-main li:last-child:after {content: none;}
+.menu-main a {
+  text-decoration: none;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 20px;
+  margin: 0 7px 0 5px;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: color .2s;
+}
+.menu-main a, .menu-main a:visited {color: #606060;}
+.menu-main a.current, .menu-main a:hover{color: #feb386;}
+.menu-main a:before,
+.menu-main a:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  top: auto;
+  right: 50%;
+  bottom: -5px;
+  left: 50%;
+  background: #feb386;
+  transition: .3s;
+}
+.menu-main a:hover:before, .menu-main .current:before {left: 0;}
+.menu-main a:hover:after, .menu-main .current:after {right: 0;}   
+@media (max-width: 550px) {
+.menu-main {padding-top: 0;}
+.menu-main li {display: block;}
+.menu-main li:after {content: none;}
+.menu-main a {
+  padding: 25px 0 20px; 
+  margin: 0 30px;
+}
 }
 
-.problem span{
-    font-weight: 700;
+.dropbtn {
+  list-style: none;
+  color: #606060;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 20px;
+  margin: 0 7px 0 5px;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: color .2s;
+  background-color: #ffffff;
+  padding: 16px;
+  border: none;
 }
 
-.hero{
-    background: url(../img/fon.jpg);
-    background-size: cover;
-    background-position: center;
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-.hero h1{
-    font-style: italic;
-    color: #fff;
-    padding-top: 128px;
-    padding-bottom: 128px;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: rgb(255, 255, 255);}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #feb386;}
+
+.promo{
+  display:flex;
+  justify-content: space-between;
+  height: auto;
+  background: url(../img/images.jpg) no-repeat;
+  background-size: cover;
+  border-radius: 0 0 30px 30px;
+  display:flex;
+  justify-content: space-between;
+}
+
+.promo img{
+  margin-right: 40px;
+  width: 45%;
+  
 
 }
 
-.PPC{
-
-}
-
-.PPClogo{
-    display: flex;
-	justify-content: space-between;
-}
-
-.PPClogo p{
-    padding-left: 48px;
-}
-
-
-.PPC p{
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 38px;
-}
-
-.the_team{
-    background: #eee;
-}
-
-.the_team p{
-    font-style: italic;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-    text-align: center;
-    }
-
-.the_team h2{
-    padding-top: 58px;
-}
-
-.teams {
-	display: flex;
-	justify-content: space-between;
-	margin-top: 70px;
-}
-
-.team {
-	width: 283px;
-    height: 350px;
-	background: url('../img/imageauthor1.png') no-repeat center top;
-	text-align: center;
-}
-
-.team-title {
-	margin-top: 200px;
-	font-size: 19px;
-}
-
-.team-text {
-	font-size: 15px;
-	margin-top: 15px;
-}
-
-.team2 {
-	background: url('../img/imageauthor2.png') no-repeat center top;
-}
-
-.team3 {
-	background: url('../img/imageauthor3.png') no-repeat center top;
-}
-
-.team4 {
-	background: url('../img/imageauthor4.png') no-repeat center top;
-}
-
-.team5 {
-	background: url('../img/imageauthor5\ \(1\).png') no-repeat center top;
-}
-
-.team6 {
-	background: url('../img/imageauthor6.png') no-repeat center top;
-}
-
-.footer{
-    background: #333;
-}
-
-.footer div{
-    width: 540px;
-    }
-
-
-.footer p{
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-    text-align: center;
-    color: #FFFFFF;
-    padding-top: 50px;
-    padding-bottom: 62px;
+.promo p{
+   width: 250px;
+  font-size: 60px;
+  margin-top: 100px;
+  margin-left: 170px;
+align-items: center;
 }
